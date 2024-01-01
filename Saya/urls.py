@@ -19,10 +19,6 @@ from django.urls import include, path
 from shop.views import *
 
 urlpatterns = [
-    path('', index, name='index'),
-    path('contact/', contact, name='contact'),
-    path('shop/', shop, name='shop'),
-    path('testimonial/', testimonial, name='testimonial'),
-    path('why/', why, name='why'),
+    path('', include('shop.urls')),
     path('admin/', admin.site.urls),
 ]
